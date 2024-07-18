@@ -56,4 +56,12 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(this,ControlEditText.class);
         startActivity(i);
     }
+    public void novena (View view){
+        Intent i = new Intent(this,LanzarsegundoActivity.class);
+        startActivity(i);
+    }
+    public void decimo(View view){
+        Intent i = new Intent(this,Almacenamientodedatos.class);
+        startActivity(i);
+    }
 }
