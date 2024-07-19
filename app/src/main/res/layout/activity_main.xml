@@ -127,4 +127,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button14" />
 
+    <Button
+        android:id="@+id/button18"
+        android:layout_width="268dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
+        android:onClick="once"
+        android:text="Almacenamiento de datos memoria interna"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button17" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

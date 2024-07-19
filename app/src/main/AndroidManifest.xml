@@ -13,6 +13,9 @@
         android:theme="@style/Theme.AndroidYa"
         tools:targetApi="31">
         <activity
+            android:name=".memoriainterna"
+            android:exported="false" />
+        <activity
             android:name=".Almacenamientodedatos"
             android:exported="false" />
         <activity
