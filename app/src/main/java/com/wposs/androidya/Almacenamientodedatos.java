@@ -1,6 +1,8 @@
 package com.wposs.androidya;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -30,7 +32,8 @@ public class Almacenamientodedatos extends AppCompatActivity {
         tv2 = findViewById(R.id.tv2);
         tv3 = findViewById(R.id.tv3);
         num = getNumAleatorio();
-        num1 = 0;
+        SharedPreferences prefe=getSharedPreferences("datos", Context.MODE_PRIVATE);
+        tv2.setText(prefe.getString("mail",""));
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -43,6 +46,7 @@ public class Almacenamientodedatos extends AppCompatActivity {
     }
 
     public void verificar(View view) {
+
         String valoringresado = et18.getText().toString();
         int valor = Integer.parseInt(valoringresado);
         if (valor == num) {
@@ -58,5 +62,9 @@ public class Almacenamientodedatos extends AppCompatActivity {
             Toast notificacion = Toast.makeText(this, "el numero es mayor", Toast.LENGTH_LONG);
             notificacion.show();
         }
+        SharedPreferences preferences=getSharedPreferences("datos",Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor=preferences.edit();
+        editor.putString("mail",tv2.getText().toString());
+        editor.commit();
     }
 }
