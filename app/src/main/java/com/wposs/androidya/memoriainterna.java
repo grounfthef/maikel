@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -28,9 +29,10 @@ private EditText eTM;
         setContentView(R.layout.activity_memoriainterna);
         eTM= findViewById(R.id.eTM);
         String[] archivos =fileList();
+
         if(existe(archivos,"notas.txt"))
             try {
-                InputStreamReader archivos = new InputStreamReader(openFileInput("notas.txt"));
+                InputStreamReader archivo = new InputStreamReader(openFileInput("notas.txt"));
                 BufferedReader br = new BufferedReader(archivo);
                 String linea = br.readLine();
                 String todo = "";
@@ -59,6 +61,10 @@ private EditText eTM;
     public void grabar(View view){
         try {
             OutputStreamWriter archivo = new OutputStreamWriter(openFileOutput(" notas.txt", Activity.MODE_PRIVATE));
+        } catch (FileNotFoundException e) {
         }
+        Toast t = Toast.makeText(this, "los datos furon grabados", Toast.LENGTH_SHORT);
+        t.show();
+        finish();
     }
 }
