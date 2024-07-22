@@ -68,4 +68,8 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(this,memoriainterna.class);
         startActivity(i);
     }
+    public void doce(View view){
+        Intent i = new Intent(this,tarjetaSD.class);
+        startActivity(i);
+    }
 }
