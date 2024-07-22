@@ -27,6 +27,7 @@ private EditText eTM;
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_memoriainterna);
+
         eTM= findViewById(R.id.eTM);
         String[] archivos =fileList();
 
@@ -45,23 +46,21 @@ private EditText eTM;
                 eTM.setText(todo);
             } catch (IOException e) {
             }
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
     }
 
-    private boolean existe(String[] archivos, String archibusca) {
+    private boolean existe(String[] archivos, String archbusca) {
         for (int f=0;f<archivos.length;f++)
-            if (archibusca.equals(archivos[f]))
+            if (archbusca.equals(archivos[f]))
                 return true;
         return false;
     }
     public void grabar(View view){
         try {
             OutputStreamWriter archivo = new OutputStreamWriter(openFileOutput(" notas.txt", Activity.MODE_PRIVATE));
-        } catch (FileNotFoundException e) {
+            archivo.write(eTM.getText().toString());
+            archivo.flush();
+            archivo.close();
+        } catch (IOException e) {
         }
         Toast t = Toast.makeText(this, "los datos furon grabados", Toast.LENGTH_SHORT);
         t.show();

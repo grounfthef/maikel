@@ -10,17 +10,16 @@
     tools:context=".MainActivity">
 
     <ScrollView
-        android:layout_width="412dp"
-        android:layout_height="658dp"
+        android:layout_width="409dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.013"
-        tools:ignore="MissingConstraints">
+        tools:ignore="NotSibling">
 
         <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -120,6 +119,13 @@
                 android:layout_marginTop="15dp"
                 android:onClick="once"
                 android:text="Almacenamiento de datos memoria interna" />
+
+            <Button
+                android:id="@+id/button21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="doce"
+                android:text="Almacenamiento de datos tarjeta SD" />
         </LinearLayout>
     </ScrollView>
 
