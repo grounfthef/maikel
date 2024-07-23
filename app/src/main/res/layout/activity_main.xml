@@ -31,10 +31,11 @@
                 android:layout_marginStart="9dp"
                 android:layout_marginTop="6dp"
                 android:background="#FFFFFF"
-                android:onClick="segundo"
                 android:text="RadioGroup RadioButton"
+                android:onClick="segundo"
                 android:textColor="#757575"
                 tools:ignore="MissingConstraints" />
+
 
             <Button
                 android:id="@+id/button4"
@@ -126,6 +127,14 @@
                 android:layout_height="wrap_content"
                 android:onClick="doce"
                 android:text="Almacenamiento de datos tarjeta SD" />
+
+            <Button
+                android:id="@+id/button25"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="trece"
+                android:text="Almacenamiento en SQLite" />
+
         </LinearLayout>
     </ScrollView>
 

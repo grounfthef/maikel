@@ -3,6 +3,7 @@ package com.wposs.androidya;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,53 +24,87 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+//        Button button2 = ((Button) findViewById(R.id.button2));
+//        button2.setOnClickListener((evt) -> irAPagina(1));
+
+//        findViewById(R.id.button2).setOnClickListener((evt) -> irAPagina(2));
+
+
     }
+
+//    public void irAPagina(int pagina) {
+//        switch (pagina) {
+//            case 1: lanzarActivity(capturadeunboton.class); break;
+//            case 2: lanzarActivity(RadioGroupRadioButton.class); break;
+//        }
+//    }
+//
+//    public void lanzarActivity(Class activity) {
+//        Intent i = new Intent(this, activity);
+//        startActivity(i);
+//    }
     public void primero(View view) {
-        Intent i = new Intent(this, capturadeunboton.class );
+        Intent i = new Intent(this, capturadeunboton.class);
         startActivity(i);
     }
-    public void segundo(View view){
-        Intent i = new Intent(this, RadioGroupRadioButton.class );
+
+    public void segundo(View view) {
+        Intent i = new Intent(this, RadioGroupRadioButton.class);
         startActivity(i);
     }
-    public void tercero(View view){
-        Intent i = new Intent(this,ControlCheckBox.class);
+
+    public void tercero(View view) {
+        Intent i = new Intent(this, ControlCheckBox.class);
         startActivity(i);
     }
-    public void cuarto(View view){
-        Intent i = new Intent(this,ControlSpinner.class);
+
+    public void cuarto(View view) {
+        Intent i = new Intent(this, ControlSpinner.class);
         startActivity(i);
     }
-    public void quinto(View view){
-        Intent i = new Intent(this,ControlListView.class);
+
+    public void quinto(View view) {
+        Intent i = new Intent(this, ControlListView.class);
         startActivity(i);
     }
-    public void sexto(View view){
-        Intent i = new Intent (this,ControlImageButton.class);
+
+    public void sexto(View view) {
+        Intent i = new Intent(this, ControlImageButton.class);
         startActivity(i);
     }
-    public void sextimo(View view){
-        Intent i = new Intent(this,NotificacionesencillasmedianteclaseToast.class);
+
+    public void sextimo(View view) {
+        Intent i = new Intent(this, NotificacionesencillasmedianteclaseToast.class);
         startActivity(i);
     }
-    public void octavo(View view){
-        Intent i = new Intent(this,ControlEditText.class);
+
+    public void octavo(View view) {
+        Intent i = new Intent(this, ControlEditText.class);
         startActivity(i);
     }
-    public void novena (View view){
-        Intent i = new Intent(this,LanzarsegundoActivity.class);
+
+    public void novena(View view) {
+        Intent i = new Intent(this, LanzarsegundoActivity.class);
         startActivity(i);
     }
-    public void decimo(View view){
-        Intent i = new Intent(this,Almacenamientodedatos.class);
+
+    public void decimo(View view) {
+        Intent i = new Intent(this, Almacenamientodedatos.class);
         startActivity(i);
     }
-    public void once(View view){
-        Intent i = new Intent(this,memoriainterna.class);
+
+    public void once(View view) {
+        Intent i = new Intent(this, memoriainterna.class);
         startActivity(i);
     }
-    public void doce(View view){
-        Intent i = new Intent(this,tarjetaSD.class);
+
+    public void doce(View view) {
+        Intent i = new Intent(this, tarjetaSD.class);
+        startActivity(i);
+    }
+    public void trece(View view){
+        Intent i = new Intent(this,AlmacenamientoenSQLite.class);
         startActivity(i);
     }
 }
