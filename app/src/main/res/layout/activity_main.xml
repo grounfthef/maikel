@@ -31,6 +31,7 @@
                 android:onClick="segundo"
                 android:text="RadioGroup RadioButton"
                 android:textColor="#757575"
+                android:textColorLink="#C60B0B"
                 tools:ignore="MissingConstraints" />
 
 
