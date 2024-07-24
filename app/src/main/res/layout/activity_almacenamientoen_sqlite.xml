@@ -1,109 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".AlmacenamientoenSQLite">
 
     <EditText
         android:id="@+id/eT"
         android:layout_width="217dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="10dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="Ingresa  codigo"
-        android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/eTT"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:inputType="number" />
 
     <EditText
         android:id="@+id/eTT"
         android:layout_width="215dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="10dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="Ingrese descripcion"
-        android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/et2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/eT" />
+        android:inputType="text" />
 
     <EditText
         android:id="@+id/et2"
         android:layout_width="216dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="25dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="Ingrese precio"
-        android:inputType="numberDecimal"
-        app:layout_constraintBottom_toTopOf="@+id/button24"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/eTT" />
+        android:inputType="numberDecimal" />
 
     <Button
         android:id="@+id/button24"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="13dp"
+        android:layout_marginTop="24dp"
         android:onClick="alta"
-        android:text="ALTA"
-        app:layout_constraintBottom_toTopOf="@+id/button26"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et2" />
+        android:text="ALTA" />
 
     <Button
         android:id="@+id/button26"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="72dp"
-        android:onClick="codigo"
-        android:text="CONSULTA POR CODIGO"
-        app:layout_constraintBottom_toTopOf="@+id/button28"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button24" />
+        android:layout_marginTop="24dp"
+        android:onClick="CONSULTAPORCODIGO"
+        android:text="CONSULTA POR CODIGO" />
 
     <Button
         android:id="@+id/button27"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="descripcion"
-        android:text="CONSULTA POR DESCRIPCION"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="24dp"
+        android:onClick="CONSULTAPORDESCRIPCION"
+        android:text="CONSULTA POR DESCRIPCION" />
 
     <Button
         android:id="@+id/button28"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="11dp"
-        android:onClick="bajar"
-        android:text="BAJAR POR CODIGO"
-        app:layout_constraintBottom_toTopOf="@+id/button29"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button26" />
+        android:layout_marginTop="24dp"
+        android:onClick="BAJARPORCODIGO"
+        android:text="BAJAR POR CODIGO" />
 
     <Button
         android:id="@+id/button29"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="224dp"
-        android:onClick="modificacion"
-        android:text="MODIFICACION"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button28" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_marginTop="24dp"
+        android:onClick="MODIFICACION"
+        android:text="MODIFICACION" />
+</LinearLayout>

@@ -107,4 +107,8 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(this,AlmacenamientoenSQLite.class);
         startActivity(i);
     }
+    public void catorce(View view){
+        Intent i =new Intent(this, LayoutTableLayout.class);
+        startActivity(i);
+    }
 }

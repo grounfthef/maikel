@@ -15,6 +15,9 @@
         android:theme="@style/Theme.AndroidYa"
         tools:targetApi="31">
         <activity
+            android:name=".LayoutTableLayout"
+            android:exported="false" />
+        <activity
             android:name=".AlmacenamientoenSQLite"
             android:exported="false" />
         <activity
