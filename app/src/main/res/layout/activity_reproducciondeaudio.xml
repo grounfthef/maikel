@@ -31,21 +31,98 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="71dp"
-        android:layout_height="66dp"
-        android:layout_marginStart="316dp"
+        android:layout_width="103dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="292dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button36"
         app:srcCompat="@mipmap/money"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="100dp" />
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="104dp"
         android:layout_height="65dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="56dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button37"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button35"
         app:srcCompat="@mipmap/stressedout"
-        tools:layout_editor_absoluteY="100dp"
         tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button37"
+        android:layout_width="96dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="9dp"
+        android:onClick="pausar1"
+        android:text="pausar"
+        app:layout_constraintBottom_toTopOf="@+id/button38"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button38"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="260dp"
+        android:onClick="continuar1"
+        android:text="contuar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button39"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="12dp"
+        android:onClick="detener1"
+        android:text="detener"
+        app:layout_constraintStart_toStartOf="@+id/button38"
+        app:layout_constraintTop_toBottomOf="@+id/button38" />
+
+    <Button
+        android:id="@+id/button40"
+        android:layout_width="97dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="9dp"
+        android:onClick="pausar2"
+        android:text="pausar"
+        app:layout_constraintBottom_toTopOf="@+id/button41"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button37"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/button41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="continuar2"
+        android:text="contunar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/button42"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:onClick="detener2"
+        android:text="detener"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button41" />
 </androidx.constraintlayout.widget.ConstraintLayout>
