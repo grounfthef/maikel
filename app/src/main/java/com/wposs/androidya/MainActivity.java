@@ -111,4 +111,8 @@ public class MainActivity extends AppCompatActivity {
         Intent i =new Intent(this, LayoutTableLayout.class);
         startActivity(i);
     }
+    public void quince(View view){
+        Intent i = new Intent(this,Reproducciondeaudio.class);
+        startActivity(i);
+    }
 }

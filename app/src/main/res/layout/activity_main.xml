@@ -140,6 +140,13 @@
                 android:onClick="catorce"
                 android:text=" Layout (TableLayout)" />
 
+            <Button
+                android:id="@+id/button34"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="quince"
+                android:text="Reproducción de audio" />
+
         </LinearLayout>
     </ScrollView>
 
