@@ -15,7 +15,6 @@ import androidx.core.view.WindowInsetsCompat;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -29,7 +28,7 @@ public class tarjetaSD extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_tarjeta_sd);
-        eTT=findViewById(R.id.eTT);
+        eTT=findViewById(R.id.et2);
         eTTM= findViewById(R.id.eTTM);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {

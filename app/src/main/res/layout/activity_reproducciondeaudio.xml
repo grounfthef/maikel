@@ -5,6 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000000"
+    android:backgroundTint="#050404"
     tools:context=".Reproducciondeaudio">
 
     <Button
@@ -33,8 +35,9 @@
         android:id="@+id/imageView"
         android:layout_width="103dp"
         android:layout_height="72dp"
-        android:layout_marginStart="292dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.951"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button36"
         app:srcCompat="@mipmap/money"

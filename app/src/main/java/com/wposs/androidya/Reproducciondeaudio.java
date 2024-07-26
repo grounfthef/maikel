@@ -12,9 +12,10 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class Reproducciondeaudio extends AppCompatActivity {
-MediaPlayer mp;
+MediaPlayer mp,mp1;
 Button b5;
 int posicion=0;
+int posicion1=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,54 +26,51 @@ int posicion=0;
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        b5=findViewById(R.id.button5);
-    }
-    public void destruir(){
-        if(mp!=null)
-            mp.release();
     }
     public void stressedou(View view){
-        MediaPlayer mp = MediaPlayer.create(this,R.raw.stressedout);
+        mp = MediaPlayer.create(this,R.raw.stressedout);
         mp.start();
     }
     public void pausar1(View view){
-        if (mp!=null&& mp.isLooping()){
-            posicion=mp.getAudioSessionId();
+        if (mp!=null&& mp.isPlaying()){
+            posicion=mp.getCurrentPosition();
             mp.pause();
         }
     }
     public void continuar1(View view){
-        if (mp!=null&& mp.isLooping()==false){
-            mp.seekTo((posicion));
-            mp.start();
-        }
-    }
-    public void detener1(View view){
-        if(mp!=null){
-            mp.stop();
-            posicion=0;
-        }
-    }
-    public void Money (View view){
-        MediaPlayer mp = MediaPlayer.create(this,R.raw.money);
-        mp.start();
-    }
-    public void pausar2(View view){
-        if (mp!=null&& mp.isLooping()){
-            posicion=mp.getAudioSessionId();
-            mp.pause();
-        }
-    }
-    public void continuar2(View view){
-        if(mp!=null&& mp.isLooping()==false){
+        if (mp!=null&& mp.isPlaying()==false){
             mp.seekTo(posicion);
             mp.start();
         }
     }
-    public void detener2(View view){
-        if (mp!=null){
+    public void detener1(View view){
+        if(mp!=null&& mp.isPlaying()){
             mp.stop();
             posicion=0;
+            mp.prepareAsync();
+        }
+    }
+    public void Money (View view){
+        mp1 = MediaPlayer.create(this,R.raw.money);
+        mp1.start();
+    }
+    public void pausar2(View view){
+        if (mp1!=null&& mp1.isPlaying()){
+            posicion1=mp1.getCurrentPosition();
+            mp1.pause();
+        }
+    }
+    public void continuar2(View view){
+        if(mp1!=null&& mp1.isPlaying()==false){
+            mp1.seekTo(posicion1);
+            mp1.start();
+        }
+    }
+    public void detener2(View view){
+        if (mp1!=null&&mp1.isPlaying()){
+            mp1.stop();
+            posicion1=0;
+            mp1.prepareAsync();
         }
     }
 }
